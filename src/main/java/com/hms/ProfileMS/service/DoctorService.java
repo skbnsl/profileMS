@@ -1,8 +1,6 @@
 package com.hms.ProfileMS.service;
 
 import com.hms.ProfileMS.dto.DoctorDTO;
-import com.hms.ProfileMS.entity.Doctor;
-import com.hms.ProfileMS.entity.Patient;
 import com.hms.ProfileMS.exception.HmsException;
 
 public interface DoctorService {

@@ -3,7 +3,6 @@ package com.hms.ProfileMS.dto;
 import java.time.LocalDate;
 
 import com.hms.ProfileMS.entity.Doctor;
-import com.hms.ProfileMS.entity.Patient;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
