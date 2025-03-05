@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hms.ProfileMS.dto.DoctorDTO;
+import com.hms.ProfileMS.dto.PatientDTO;
 import com.hms.ProfileMS.exception.HmsException;
 import com.hms.ProfileMS.service.DoctorService;
 
@@ -33,4 +35,10 @@ public class DoctorAPI {
     public ResponseEntity<DoctorDTO> getPatientById(@PathVariable Long id) throws HmsException {
         return new ResponseEntity<>(doctorService.getDoctorById(id),HttpStatus.OK);
     }
+
+    @PutMapping("/update")
+    public ResponseEntity<DoctorDTO> updateDoctor(@RequestBody DoctorDTO doctorDTO) throws HmsException {
+        return new ResponseEntity<>(doctorService.updateDoctor(doctorDTO),HttpStatus.OK);
+    }
+
 }

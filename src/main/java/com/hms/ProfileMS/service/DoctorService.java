@@ -7,5 +7,6 @@ public interface DoctorService {
 
     public Long addDoctor(DoctorDTO doctor) throws HmsException;
     public DoctorDTO getDoctorById(Long id) throws HmsException;
+    public DoctorDTO updateDoctor(DoctorDTO doctorDTO) throws HmsException;
 
 }
